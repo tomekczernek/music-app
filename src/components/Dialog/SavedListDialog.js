@@ -35,8 +35,8 @@ function SavedListDialog({
         <DialogContent>
           {userSavedLists.length ? (
             userSavedLists.map((item, index) => (
-              <div>
-                <p key={`user-list-item-${index}`}>{item.listName}</p>
+              <div key={`user-list-item-${index}`}>
+                <p>{item.listName}</p>
                 <Divider />
               </div>
             ))
