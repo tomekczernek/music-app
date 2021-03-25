@@ -3,13 +3,13 @@ import axios from "axios";
 function get(q) {
   return axios({
     method: "GET",
-    url: process.env.REACT_APP_URL,
+    url: "https://deezerdevs-deezer.p.rapidapi.com/search",
     params: {
         "q": q
     },
     headers: {
-        "x-rapidapi-key": process.env.REACT_APP_KEY,
-        "x-rapidapi-host": process.env.REACT_APP_HOST,
+        "x-rapidapi-key": "5696c072a9mshfa3f1127e1360d2p1684cajsn3100f417c5ca",
+        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
         "useQueryString": true
     }
   });
