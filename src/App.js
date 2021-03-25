@@ -73,6 +73,9 @@ function App() {
           setSongsData(mapData);
           setOpenLoader(false);
         }
+      }).catch((error) => {
+        setMessageBoxText(`${error}`);
+        setMessageBoxOpen(true);
       });
     } else {
       setMessageBoxText("Enter value");
