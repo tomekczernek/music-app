@@ -119,9 +119,10 @@ function App() {
 
   const saveList = (params) => (event) => {
     if (params.listName) {
+      const createDate = new Date().toLocaleString().replace(/,/g, '');
       setOpenSaveDialog(false);
       setUserList([]);
-      setUserSavedLists([...userSavedLists, params]);
+      setUserSavedLists([...userSavedLists, {listName:params.listName, createDate:createDate}]);
       setMessageBoxText("Track list was saved");
       setMessageBoxOpen(true);
     } else {
@@ -167,7 +168,7 @@ function App() {
       padding: 11,
     },
     saveBtn: {
-      marginTop: 20,
+      marginTop: 20
     },
   }));
 

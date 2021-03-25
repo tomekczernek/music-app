@@ -1,3 +1,5 @@
+import { ListItem } from '../Songs';
+
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Button,
@@ -5,7 +7,6 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
-  Divider
 } from "@material-ui/core";
 
 function SavedListDialog({
@@ -34,11 +35,8 @@ function SavedListDialog({
         <DialogTitle id="form-dialog-title">Your lists</DialogTitle>
         <DialogContent>
           {userSavedLists.length ? (
-            userSavedLists.map((item, index) => (
-              <div key={`user-list-item-${index}`}>
-                <p>{item.listName}</p>
-                <Divider />
-              </div>
+            userSavedLists.map(item => (
+              <ListItem key={item.createDate} listName={item.listName} createDate={item.createDate} />
             ))
           ) : (
             <p>You don't have any saved lists yet.</p>

@@ -58,7 +58,7 @@ function SaveDialog({ openSaveDialog, closeSaveDialog, saveList }) {
             className={classes.button}
             onClick={saveList({ listName: listName })}
             variant="contained"
-            color="default"
+            color="secondary"
           >
             Save
           </Button>
